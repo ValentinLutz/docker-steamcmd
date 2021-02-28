@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  sut:
+    build: .
+    image: vlutz/steamcmd:ubuntu-18.04
+    command: +help +quit
