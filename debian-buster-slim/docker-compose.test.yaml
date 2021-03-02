@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  sut:
+    build: .
+    image: vlutz/steamcmd:debian-buster-slim
+    command: +help +quit
