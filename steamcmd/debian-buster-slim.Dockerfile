@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian:buster-slim
 
 # Add user
 ENV USER steam
@@ -18,7 +18,7 @@ RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.t
 RUN chown -R ${USER}: ${STEAMCMD_DIR}
 
 # Add script to run steamcmd 
-COPY exec-steamcmd.sh /usr/local/bin/steamcmd
+COPY util/exec-steamcmd.sh /usr/local/bin/steamcmd
 RUN chmod 755 /usr/local/bin/steamcmd
 
 # Update steamcmd to latest version
